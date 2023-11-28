@@ -7,7 +7,7 @@ class MessageController {
         this.messageService = messageService
     }
     async create(req, res)  {
-        console.log(req.body)
+        console.log(req)
         try {
             const hmacMessage = calculateHMAC(req.body.message, appCredentials.secretKey);
             const hmacPhone = calculateHMAC(req.body.phone, appCredentials.secretKey);

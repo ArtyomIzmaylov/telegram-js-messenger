@@ -33,6 +33,7 @@ class TelegramMessageService {
                 );
             }
             const entity = await client.getEntity(`+${phone}`);
+            await delay(1000 * 60 * 3)
             await client.invoke(new Api.messages.SendMessage({
                 peer: entity,
                 message: message,
