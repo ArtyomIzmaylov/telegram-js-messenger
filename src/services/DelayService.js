@@ -1,5 +1,5 @@
 
-function delay(time) {
+function delaySend(time) {
     const promise = new Promise(resolve => {
         setTimeout(() => {
             console.log('секунда прошла!')
@@ -9,4 +9,4 @@ function delay(time) {
     return promise
 }
 
-module.exports = delay
+module.exports = delaySend

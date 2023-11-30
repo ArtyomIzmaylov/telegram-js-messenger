@@ -1,5 +1,6 @@
 const {TelegramClient, Api} = require("telegram");
 const {StringSession} = require("telegram/sessions");
+const delaySend = require("../DelayService");
 
 class TelegramMessageService {
     constructor(appCredentials, stringSession) {
@@ -33,7 +34,7 @@ class TelegramMessageService {
                 );
             }
             const entity = await client.getEntity(`+${phone}`);
-            await delay(1000 * 60 * 3)
+            await delaySend(1000 * 20)
             await client.invoke(new Api.messages.SendMessage({
                 peer: entity,
                 message: message,
