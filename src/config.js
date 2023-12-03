@@ -5,7 +5,7 @@ require('dotenv').config({ path: dotenvPath });
 
 const sessionPath = path.resolve(__dirname, '..', 'db/session.json'); // Замените 'config' на ваш путь
 
-console.log(sessionPath)
+console.log(sessionPath, 'сессия')
 
 const appCredentials = {
     apiId : parseInt(process.env.API_ID, 10),
